@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C445F824-1B9A-49A3-BF87-A8974469F5A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cinema.Controller</RootNamespace>
+    <AssemblyName>Cinema.Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BookingCtrl.cs" />
+    <Compile Include="Classes\HallCtrl.cs" />
+    <Compile Include="Classes\LoginTokenCtrl.cs" />
+    <Compile Include="Classes\MovieCtrl.cs" />
+    <Compile Include="Classes\MovieInfoCtrl.cs" />
+    <Compile Include="Classes\ScreeningCtrl.cs" />
+    <Compile Include="Classes\ScreeningInfoCtrl.cs" />
+    <Compile Include="Classes\SeatCtrl.cs" />
+    <Compile Include="Classes\TicketCtrl.cs" />
+    <Compile Include="Classes\TicketTypeCtrl.cs" />
+    <Compile Include="Classes\UserCtrl.cs" />
+    <Compile Include="EncryptionUtil.cs" />
+    <Compile Include="Interfaces\IBookingCtrl.cs" />
+    <Compile Include="Interfaces\IHallCtrl.cs" />
+    <Compile Include="Interfaces\ILoginTokenCtrl.cs" />
+    <Compile Include="Interfaces\IMovieCtrl.cs" />
+    <Compile Include="Interfaces\IMovieInfoCtrl.cs" />
+    <Compile Include="Interfaces\IScreeningCtrl.cs" />
+    <Compile Include="Interfaces\IScreeningInfoCtrl.cs" />
+    <Compile Include="Interfaces\ISeatCtrl.cs" />
+    <Compile Include="Interfaces\ITicketCtrl.cs" />
+    <Compile Include="Interfaces\ITicketTypeCtrl.cs" />
+    <Compile Include="Interfaces\IUserCtrl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cinema.Data.Infrastructure\Cinema.Data.Infrastructure.csproj">
+      <Project>{0edbc94c-656e-40c1-950b-dbf715768994}</Project>
+      <Name>Cinema.Data.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cinema.Domain\Cinema.Domain.csproj">
+      <Project>{21e4b123-5261-47ef-aed5-7cda23622a24}</Project>
+      <Name>Cinema.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

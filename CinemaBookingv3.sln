@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Domain", "Cinema.Domain\Cinema.Domain.csproj", "{21E4B123-5261-47EF-AED5-7CDA23622A24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2CD0FFF4-A4DC-4CEA-B672-93128C312F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Data.Infrastructure", "Cinema.Data.Infrastructure\Cinema.Data.Infrastructure.csproj", "{0EDBC94C-656E-40C1-950B-DBF715768994}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{56040F9A-0F17-4909-BADD-5D80E8508410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Data.Context", "Cinema.Data.Context\Cinema.Data.Context.csproj", "{675C7D0C-28C6-436C-9D01-BFAB196146DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{0B2AB1B5-E774-48C9-A73C-A07B40639812}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{32694EF3-470A-464A-B6FD-046ED1B34D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.WCFService", "Cinema.WCFService\Cinema.WCFService.csproj", "{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DedicatedClient", "DedicatedClient", "{5487AA39-B0DB-4EBE-A605-7B60B48B4B66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DedicatedClient", "DedicatedClient\DedicatedClient.csproj", "{E0972A32-B31A-4616-99C8-1BE02C780A0A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3} = {0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_ReadMe", "_ReadMe", "{9B233E45-2620-46E3-9298-B15AE86A92E0}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.StartServices", "Cinema.StartServices\Cinema.StartServices.csproj", "{768008B2-2B0A-4B7D-B67A-528899022A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema.Controller", "Cinema.Controller\Cinema.Controller.csproj", "{C445F824-1B9A-49A3-BF87-A8974469F5A1}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dmai0913-1.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Cinema.Domain\\Cinema.Domain.csproj
+		SccProjectTopLevelParentUniqueName1 = CinemaBookingv3.sln
+		SccProjectName1 = Cinema.Domain
+		SccLocalPath1 = Cinema.Domain
+		SccProjectUniqueName2 = Cinema.Data.Infrastructure\\Cinema.Data.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName2 = CinemaBookingv3.sln
+		SccProjectName2 = Cinema.Data.Infrastructure
+		SccLocalPath2 = Cinema.Data.Infrastructure
+		SccProjectUniqueName3 = Cinema.Data.Context\\Cinema.Data.Context.csproj
+		SccProjectTopLevelParentUniqueName3 = CinemaBookingv3.sln
+		SccProjectName3 = Cinema.Data.Context
+		SccLocalPath3 = Cinema.Data.Context
+		SccProjectUniqueName4 = Cinema.WCFService\\Cinema.WCFService.csproj
+		SccProjectTopLevelParentUniqueName4 = CinemaBookingv3.sln
+		SccProjectName4 = Cinema.WCFService
+		SccLocalPath4 = Cinema.WCFService
+		SccProjectUniqueName5 = DedicatedClient\\DedicatedClient.csproj
+		SccProjectTopLevelParentUniqueName5 = CinemaBookingv3.sln
+		SccProjectName5 = DedicatedClient
+		SccLocalPath5 = DedicatedClient
+		SccProjectUniqueName6 = Cinema.StartServices\\Cinema.StartServices.csproj
+		SccProjectTopLevelParentUniqueName6 = CinemaBookingv3.sln
+		SccProjectName6 = Cinema.StartServices
+		SccLocalPath6 = Cinema.StartServices
+		SccProjectUniqueName7 = Cinema.Controller\\Cinema.Controller.csproj
+		SccProjectTopLevelParentUniqueName7 = CinemaBookingv3.sln
+		SccProjectName7 = Cinema.Controller
+		SccLocalPath7 = Cinema.Controller
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21E4B123-5261-47EF-AED5-7CDA23622A24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E4B123-5261-47EF-AED5-7CDA23622A24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E4B123-5261-47EF-AED5-7CDA23622A24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E4B123-5261-47EF-AED5-7CDA23622A24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDBC94C-656E-40C1-950B-DBF715768994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDBC94C-656E-40C1-950B-DBF715768994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDBC94C-656E-40C1-950B-DBF715768994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDBC94C-656E-40C1-950B-DBF715768994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675C7D0C-28C6-436C-9D01-BFAB196146DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675C7D0C-28C6-436C-9D01-BFAB196146DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675C7D0C-28C6-436C-9D01-BFAB196146DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675C7D0C-28C6-436C-9D01-BFAB196146DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0972A32-B31A-4616-99C8-1BE02C780A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0972A32-B31A-4616-99C8-1BE02C780A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0972A32-B31A-4616-99C8-1BE02C780A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0972A32-B31A-4616-99C8-1BE02C780A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768008B2-2B0A-4B7D-B67A-528899022A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768008B2-2B0A-4B7D-B67A-528899022A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768008B2-2B0A-4B7D-B67A-528899022A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768008B2-2B0A-4B7D-B67A-528899022A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C445F824-1B9A-49A3-BF87-A8974469F5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C445F824-1B9A-49A3-BF87-A8974469F5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C445F824-1B9A-49A3-BF87-A8974469F5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C445F824-1B9A-49A3-BF87-A8974469F5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21E4B123-5261-47EF-AED5-7CDA23622A24} = {2CD0FFF4-A4DC-4CEA-B672-93128C312F95}
+		{0EDBC94C-656E-40C1-950B-DBF715768994} = {56040F9A-0F17-4909-BADD-5D80E8508410}
+		{675C7D0C-28C6-436C-9D01-BFAB196146DB} = {56040F9A-0F17-4909-BADD-5D80E8508410}
+		{C445F824-1B9A-49A3-BF87-A8974469F5A1} = {0B2AB1B5-E774-48C9-A73C-A07B40639812}
+		{0A022BD9-8DE9-43BC-80BC-D15CA31D25B3} = {32694EF3-470A-464A-B6FD-046ED1B34D9B}
+		{768008B2-2B0A-4B7D-B67A-528899022A38} = {32694EF3-470A-464A-B6FD-046ED1B34D9B}
+		{E0972A32-B31A-4616-99C8-1BE02C780A0A} = {5487AA39-B0DB-4EBE-A605-7B60B48B4B66}
+	EndGlobalSection
+EndGlobal

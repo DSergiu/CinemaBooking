@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Cinema.WCFService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Cinema.WCFService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserLogin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="emailORphone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserLogin" nillable="true" type="tns:UserLogin" />
+  <xs:complexType name="LoginResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TokenKey" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginResult" nillable="true" type="tns:LoginResult" />
+  <xs:complexType name="ArrayOfValidationError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationError" nillable="true" type="tns:ValidationError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationError" nillable="true" type="tns:ArrayOfValidationError" />
+  <xs:complexType name="ValidationError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationError" nillable="true" type="tns:ValidationError" />
+  <xs:complexType name="UserRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ConfirmPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRegister" nillable="true" type="tns:UserRegister" />
+  <xs:complexType name="CreateUserResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserKey" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateUserResult" nillable="true" type="tns:CreateUserResult" />
+  <xs:complexType name="BookingModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ScreeningId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Tickets" nillable="true" type="tns:ArrayOfTicketModel" />
+      <xs:element minOccurs="0" name="UserGuid" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BookingModel" nillable="true" type="tns:BookingModel" />
+  <xs:complexType name="ArrayOfTicketModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TicketModel" nillable="true" type="tns:TicketModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTicketModel" nillable="true" type="tns:ArrayOfTicketModel" />
+  <xs:complexType name="TicketModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Column" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Row" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TicketTypeId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TicketModel" nillable="true" type="tns:TicketModel" />
+</xs:schema>
